@@ -12,13 +12,21 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "ubuntu_16_04_v1_1"
 #  config.vm.box_version = "1.0.0"
 #  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
   # config.vm.box_check_update = true
+
+  # config.disksize.size = '20GB'
+
+  config.ssh.username = "ubuntu"
+  #config.ssh.password = "vagrant"
+  #config.ssh.insert_key = false
+  # config.ssh.private_key_path = "~/.ssh/id_rsa"
+  # config.ssh.forward_agent = true
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -55,12 +63,13 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+    vb.gui = false
   #
   #   # Customize the amount of memory on the VM:
     vb.memory = "2048"
-    vb.cpus = "1"
-    vb.name = "ubuntu_16_04_v1_0"
+    vb.cpus = "2"
+    # vb.customize "pre-boot", ["modifyhd", :id, "--resize", "10240"]
+    vb.name = "ubuntu_16_04_v1_1"
   end
   #
   # View the documentation for the provider you are using for more
