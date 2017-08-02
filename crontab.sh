@@ -25,6 +25,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 #
 @reboot root /usr/local/mysql/support-files/mysql.server start \
 && /usr/local/redis/bin/redis-server /usr/local/redis/conf/redis.conf \
-&& /usr/local/php/sbin/php-fpm \
-PATH=$PATH:/usr/local/php/bin:/usr/local/mysql/bin:/usr/local/nginx/sbin \
-export PATH
+&& /usr/local/php/sbin/php-fpm
