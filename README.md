@@ -6,4 +6,4 @@
 - [Add some way to increase disk space from Vagrantfile](https://github.com/mitchellh/vagrant/issues/2339)
 
 ### Links
-[https://github.com/erikdubbelboer/phpRedisAdmin](https://github.com/erikdubbelboer/phpRedisAdmin)
+- [https://github.com/erikdubbelboer/phpRedisAdmin](https://github.com/erikdubbelboer/phpRedisAdmin)
