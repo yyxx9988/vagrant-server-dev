@@ -23,6 +23,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 */30 * * * *  root  chown -R webmaster:webmaster /usr/local/redis > /dev/null 2>&1
 */30 * * * *  root  chown -R webmaster:webmaster /usr/local/php > /dev/null 2>&1
 #
-@reboot root /usr/local/mysql/support-files/mysql.server start \
-&& /usr/local/redis/bin/redis-server /usr/local/redis/conf/redis.conf \
-&& /usr/local/php/sbin/php-fpm
+@reboot root /usr/local/mysql/support-files/mysql.server start && /usr/local/redis/bin/redis-server /usr/local/redis/conf/redis.conf && /usr/local/php/sbin/php-fpm
